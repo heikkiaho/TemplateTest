@@ -10,7 +10,7 @@
 
 using namespace std;
 
-int main() {
+int main(int argc, char *argv[]) {
 	cout << " start "<< "\n";
 	cout.flush();
 	PropertyHolder holder;
@@ -19,8 +19,8 @@ int main() {
 	holder.AddProperty("property3", "C");
 	holder.AddProperty("property4", "D");
 
-	//string property = holder.GetProperty("property1").value.c_str();
-	//cout << " property " << property << "\n";
+	Property property = holder.GetProperty("property1");
+	cout << " property " << property.value.c_str() << "\n";
 	cout.flush();
 	return 0;
 }
